@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <form action=""></form>
+        <div class="display" id="windowDisplay">
+            <div class="data" id="data"></div>
+            <div class="answer" id="answer"></div>
+        </div>
+        
+            <div class="rows">
+                <input class="btn"  id="shiftLeft" type="button" value="◀">
+                <input class="btn"  id="shiftRight"  type  ="button" value="▶">
+                <input class="btn"  id="leftBracket" type  ="button" value="(">
+                <input class="btn"  id="rightBracket" type ="button" value=")">
+            </div>
+            
+            <div class="rows">
+                <input class="btn"  id="one" onclick="showOne()" type  ="button" value="1">
+                <input class="btn" onclick="showTwo()" id="two" type   ="button" value="2">
+                <input class="btn" onclick="showThree()" id="three" type   ="button" value="3">
+                <input class="btn" onclick="showPlus()" type   ="button" value="+">
+            </div>
+            <div class="rows">
+                <input class="btn" onclick="showFour()" id="four" type ="button" value="4">
+                <input class="btn" onclick="showFive()" id="five" type ="button" value="5">
+                <input class="btn" onclick="showSix()" id="six" type   ="button" value="6">
+                <input class="btn"  onclick="showMinus()" id="minus" type="button" value="-">
+            </div>
+            <div class="rows">
+                <input class="btn" onclick="showSeven()" id="seven" type   ="button" value="7">
+                <input class="btn" onclick="showEight()" id="eight" type   ="button" value="8">
+                <input class="btn" onclick="showNine()" id="nine" type ="button" value="9">
+                <input class="btn" onclick="showMultiply()" id="multiply" type  ="button" value="✕">
+            </div>
+            
+            <div class="rows">
+                <input class="btn" onclick="showZero()" id="zero" type ="button" value="0">
+                <input class="btn" onclick="showPoint()" id="point" type   ="button" value=".">
+                <input class="btn"  onclick="showDivide()" id="divide" type="button" value="/">
+                <input class="btn"  onclick="showEqual()" id="equal" type="button" value="=">
+            </div>
+            <input class="clear" type = "button" value = "Clear All" onclick ="clearAll()" id= "clear" >
+        </form>
+        
+    </div>
+    
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
