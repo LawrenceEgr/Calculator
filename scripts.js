@@ -90,9 +90,27 @@ const showMultiply = () =>{
 const showDivide = () =>{
     (data.value) += '/';
 }
+const showLeftBracket = () =>{
+    (data.value) += '(';
+}
+const showRightBracket = () =>{
+    (data.value) += ')';
+    liveCalc();
+}
 const showEqual = () =>{
-    document.getElementById("answer").value = '';
-    (data.value) = 'Ans = '+ '' + eval((data.value)) ;
+
+    try {
+        eval((data.value));
+        document.getElementById("answer").value = '';
+        (data.value) = 'Ans = '+ '' + eval((data.value)) ;
+    } catch (error) {
+        
+        data.value = 'syntax error!' ;
+        document.getElementById('answer').value = '';
+        return ;
+    }
+    
+    
 }
 
 
@@ -101,6 +119,11 @@ const clearAll =() => {
     document.getElementById("answer").value = '';
 }
 const liveCalc =()=>{
+    try {
+        eval(data.value);
+    } catch (error) {
+        document.getElementById("answer").value = 'syntax error';
+    }
     document.getElementById("answer").value = eval((data.value));
 }
 

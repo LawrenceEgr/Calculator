@@ -62,6 +62,48 @@ body{
     color: white;
     cursor: pointer;
 }
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: darkgray;
+    padding: 20px;
+}
+.name-bar {
+    display: flex;
+    gap: 20px;
+}
+p.name{
+    font-size: 20px;
+}
+input.name{
+    font-size: 28px;
+}
+.comment-text{
+    height: auto;
+    width: 100%;
+    background-color: aquamarine;
+
+}
+.submit{
+    height: 40px;
+    max-width: fit-content;
+    padding: 5px;
+    background-color: green;
+    border-radius: 12px;
+    color: white;
+    font-size: 23px;
+    margin-left: 80%;
+}
+.footer{
+    margin-top: 8px;
+    padding: 20px;
+    background-color: grey;
+    font-size: 30px;
+    border-radius: 20px;
+    
+    max-height: fit-content;
+}
 @media only screen and (max-width:518px)
  {
     .container{
