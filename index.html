@@ -12,13 +12,13 @@
     <div class="container">
         <form action=""></form>
         <div class="display" id="windowDisplay">
-            <div class="data" id="data"></div>
-            <div class="answer" id="answer"></div>
+            <input class="data" id="data" type="text">
+            <input class="answer" id="answer" type="text">
         </div>
         
             <div class="rows">
                 <input class="btn"  id="shiftLeft" type="button" value="◀">
-                <input class="btn"  id="shiftRight"  type  ="button" value="▶">
+                <input class="btn" onclick="handleClick()" id="shiftRight"  type  ="button" value="▶">
                 <input class="btn"  id="leftBracket" type  ="button" value="(">
                 <input class="btn"  id="rightBracket" type ="button" value=")">
             </div>
@@ -47,8 +47,13 @@
                 <input class="btn" onclick="showPoint()" id="point" type   ="button" value=".">
                 <input class="btn"  onclick="showDivide()" id="divide" type="button" value="/">
                 <input class="btn"  onclick="showEqual()" id="equal" type="button" value="=">
+            </div >
+            <div class="bottom">
+                <input type="button" class="clear" value="DEL" onclick="removeCharacter()">
+                <input class="clear" type = "button" value = "Clear All" onclick ="clearAll()" id= "clear" >
+                
             </div>
-            <input class="clear" type = "button" value = "Clear All" onclick ="clearAll()" id= "clear" >
+            
         </form>
         
     </div>

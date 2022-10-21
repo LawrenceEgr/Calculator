@@ -34,72 +34,101 @@ const divide = document.getElementById("divide");
 const number  =  [1, 2 ,3, 4, 5, 6, 7, 8 ,9, 0];
 
 const showOne = () =>{
-    data.innerHTML += number[0];
+    (data.value) += number[0];
     liveCalc();
 
 }
 const showTwo = () =>{
-    data.innerHTML += number[1];
+    (data.value) += number[1];
     liveCalc();
 }
 const showThree = () =>{
-    data.innerHTML += number[2];
+    (data.value) += number[2];
     liveCalc();
 }
 const showFour = () =>{
-    data.innerHTML += number[3];
+    (data.value) += number[3];
     liveCalc();
 }
 const showFive = () =>{
-    data.innerHTML += number[4];
+    (data.value) += number[4];
     liveCalc();
 }
 const showSix = () =>{
-    data.innerHTML += number[5];
+    (data.value) += number[5];
     liveCalc();
 }
 const showSeven = () =>{
-    data.innerHTML += number[6];
+    (data.value) += number[6];
     liveCalc();
 }
 const showEight = () =>{
-    data.innerHTML += number[7];
+    (data.value) += number[7];
     liveCalc();
 }
 const showNine = () =>{
-    data.innerHTML += number[8];
+    (data.value) += number[8];
     liveCalc();
 }
 const showZero = () =>{
-    data.innerHTML += number[9] ;
+    (data.value) += number[9] ;
     liveCalc();   
     
 }
 const showPlus = () =>{
-    data.innerHTML += '+';
+    (data.value) += '+';
 }
 const showPoint = () =>{
-    data.innerHTML += ".";
+    (data.value) += ".";
 }
 const showMinus = () =>{
-    data.innerHTML += '-';
+    (data.value) += '-';
 }
 const showMultiply = () =>{
-    data.innerHTML += '*';
+    (data.value) += '*';
 }
 const showDivide = () =>{
-    data.innerHTML += '/';
+    (data.value) += '/';
 }
 const showEqual = () =>{
-    document.getElementById("answer").innerHTML = ''
-    data.innerHTML = 'Ans = '+ '' + eval(data.innerHTML) ;
+    document.getElementById("answer").value = '';
+    (data.value) = 'Ans = '+ '' + eval((data.value)) ;
 }
 
 
 const clearAll =() => {
-    data.innerHTML = '';
-    document.getElementById("answer").innerHTML = '';
+    (data.value) = '';
+    document.getElementById("answer").value = '';
 }
 const liveCalc =()=>{
-    document.getElementById("answer").innerHTML = eval(data.innerHTML);
+    document.getElementById("answer").value = eval((data.value));
+}
+
+
+const btn = document.getElementById('btn');
+
+function handleClick() {
+  // 👇️ get length right before clicking button
+  const end = data.value.length;
+
+  data.setSelectionRange(end, end);
+  data.focus();
+};
+
+// const removeCharacter = () => {
+    
+     
+//     newString = data.value.substr(0, position - 1)
+//     // + data.value.substr(position, data.value.length);
+
+//     data.value = newString;
+//     liveCalc();
+// }
+const removeCharacter = () => {
+    handleClick();
+    let originalString = data.value ;     
+    let lastCharRemoved =
+    originalString.slice(0, originalString.length - 1); 
+    data.value.textContent = lastCharRemoved;
+    liveCalc();
 }
